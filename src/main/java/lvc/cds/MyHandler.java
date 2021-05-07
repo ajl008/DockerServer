@@ -35,7 +35,6 @@ public class MyHandler implements HttpHandler{
         StringBuilder contentBuilder = new StringBuilder();
         InputStream in = MyHandler.class.getClassLoader().getResourceAsStream(filePath);
         try (BufferedReader br = new BufferedReader(new InputStreamReader(in))) {
-        // try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String sCurrentLine;
             while ((sCurrentLine = br.readLine()) != null) {
                 contentBuilder.append(sCurrentLine).append("\n");
