@@ -13,6 +13,5 @@ public final class App {
         server.createContext("/", new MyHandler());
         server.setExecutor(Executors.newCachedThreadPool());
         server.start();
-        // testing
     }
 }

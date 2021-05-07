@@ -13,7 +13,7 @@ ENTRYPOINT java -cp server-1.0-SNAPSHOT.jar lvc.cds.App
 
 # to debug: ENTRYPOINT /bin/bash
 
-
+# cd to project Dockerfile
 #docker build -t [tag name] .
 #docker run -t -i -p 3333:8080 [tag name]
 #ctrl C to stop, rm to remove
