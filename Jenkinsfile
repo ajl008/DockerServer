@@ -25,6 +25,8 @@ pipeline {
         stage('Deploy') { 
             steps {
                 sh 'docker build -t dockerserver .'
+                sh 'docker images'
+                sh 'docker ps -a'
                 sh 'docker run -t -p 5555:8000 dockerserver'
             }
         }
