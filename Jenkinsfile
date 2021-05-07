@@ -27,8 +27,7 @@ pipeline {
                 sh 'docker build -t dockerserver .'
                 sh 'docker kill $(docker ps -q)'
                 sh 'docker rm $(docker ps -a -q)'
-                sh 'docker ps -a'
-                sh 'docker run -t -p 5555:8000 dockerserver'
+                sh 'docker run -d -p 5555:8000 dockerserver'
             }
         }
     }
