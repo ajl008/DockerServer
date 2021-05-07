@@ -25,7 +25,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 sh 'docker build -t dockerserver .'
-                sh 'docker run -p 3333:8080 dockerserver'
+                sh 'docker run -p 5555:8000 dockerserver'
             }
         }
     }
