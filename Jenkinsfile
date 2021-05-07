@@ -25,7 +25,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 sh 'docker build -t dockerserver .'
-                sh 'docker rm $(docker ps -aqf "status=exited")'
+                // sh 'docker rm $(docker ps -aqf "status=exited")'
                 sh 'docker ps -a'
                 sh 'docker run -t -p 5555:8000 dockerserver'
             }
