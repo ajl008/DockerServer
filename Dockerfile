@@ -15,6 +15,6 @@ ENTRYPOINT java -cp server-1.0-SNAPSHOT.jar lvc.cds.App
 
 # cd to project Dockerfile
 #docker build -t [tag name] .
-#docker run -t -i -p 3333:8080 [tag name]
+#docker run -t -i -p 5555:8000 [tag name]
 #ctrl C to stop, rm to remove
-#test on localhost:3333/?file=foo.txt
+#test on localhost:5555/?file=foo.txt
