@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Docker run') {
             steps {
-                sh 'docker run -t -i -p 3333:8080 dockerserver'
+                sh 'docker run -p 3333:8080 dockerserver'
             }
         }
     }
