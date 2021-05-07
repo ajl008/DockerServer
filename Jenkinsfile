@@ -1,14 +1,18 @@
 pipeline {
-    agent {
-                docker {image 'maven:3.8.1-openjdk-11'}
-            }
+    agent any
     stages {
         stage('Test') { 
+            agent {
+                docker {image 'maven:3.8.1-openjdk-11'}
+            }
             steps {
                 sh 'mvn test' 
             }
         }
         stage('Build') {
+            agent {
+                docker {image 'maven:3.8.1-openjdk-11'}
+            }
             when {
               expression {
                 currentBuild.result == null || currentBuild.result == 'SUCCESS' 
