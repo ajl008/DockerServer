@@ -5,7 +5,7 @@ WORKDIR /usr/app
 #copy files needed for app to run or jar file
 # could also copy files folder: COPY files/* files/
 # or mount volume so if you make new files, container sees live
-COPY ./target/server-1.0-SNAPSHOT.jar /usr/app
+COPY ./target/server-1.0-SNAPSHOT.jar .
 #run the application
 ENTRYPOINT java -cp server-1.0-SNAPSHOT.jar lvc.cds.App
 # ENTRYPOINT ["/bin/sh", "run.sh"]
